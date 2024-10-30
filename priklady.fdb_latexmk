@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1730303702 "c:/Users/MichalStefik/Downloads/EMV1_priklady/priklady.tex" "priklady.pdf" "priklady" 1730303707 0
+["pdflatex"] 1730325966 "c:/Users/MichalStefik/Downloads/EMV1_priklady/priklady.tex" "priklady.pdf" "priklady" 1730325971 0
   "C:/MiKTeX_INSTALL/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
   "C:/MiKTeX_INSTALL/fonts/enc/dvips/lm/lm-mathit.enc" 1256929440 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "C:/MiKTeX_INSTALL/fonts/enc/dvips/lm/lm-mathsy.enc" 1256929440 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -239,15 +239,15 @@
   "C:/MiKTeX_INSTALL/tex/latex/xifthen/xifthen.sty" 1448274436 5689 1bfa68243e89a54479e7d0580773c57e ""
   "C:/Users/MichalStefik/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1674686943 6106839 871652c58701e43579d7db1071d485dc ""
   "C:/Users/MichalStefik/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1674691219 23939038 9422fbd0531ca390adfc864e88ba5df6 ""
-  "c:/Users/MichalStefik/Downloads/EMV1_priklady/priklady.tex" 1730303701 10925 36142a0439d78fd772130ef96995f0db ""
+  "c:/Users/MichalStefik/Downloads/EMV1_priklady/priklady.tex" 1730325826 10871 d5509ad343e0704c069f895915f7349c ""
   "images/UETE_Color_RGB_CZ.png" 1694676004 52550 96de490aa0cb840917081ee0b1c1a0f7 ""
-  "images/diel1.jpg" 1729974754 2227814 47a87ff0b6a0ddddd11afcbbb6a5972b ""
-  "images/diel2.jpg" 1729978650 2233653 c3ea9220edde21d343e46e4c3b2efb71 ""
-  "priklady.aux" 1730303707 857 4335d804735e599eefce56d91edf5169 "pdflatex"
-  "priklady.out" 1730303707 277 91a9a59859e86f1595db66e4d8f4e6ce "pdflatex"
-  "priklady.tex" 1730303701 10925 36142a0439d78fd772130ef96995f0db ""
-  "shared.tex" 1730302548 5887 bdb102c61c9a314ec1822f4197d34e55 ""
-  "titlepage.tex" 1730300781 1168 78ff73325b0e1456d92a4153e10914ca ""
+  "images/diel1.jpg" 1730325281 2220472 07bbe3faefa00187d4b6d63af3c06b24 ""
+  "images/diel2.jpg" 1730325316 2226668 6e43c9c0bdc5f1a85ef999f8bf898610 ""
+  "priklady.aux" 1730325971 857 4335d804735e599eefce56d91edf5169 "pdflatex"
+  "priklady.out" 1730325971 277 91a9a59859e86f1595db66e4d8f4e6ce "pdflatex"
+  "priklady.tex" 1730325826 10871 d5509ad343e0704c069f895915f7349c ""
+  "shared.tex" 1730325523 5876 2b37cf26ef045905f376a57731852351 ""
+  "titlepage.tex" 1730325608 1024 c3738b8934bba372706395304aef1ae4 ""
   (generated)
   "priklady.aux"
   "priklady.log"
