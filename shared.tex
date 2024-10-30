@@ -1,7 +1,6 @@
 % !TEX root = priklady.tex
 % FEKT.tex
 % https://github.com/VUT-FEKT-IBE/FEKT.tex
-% Git hash repozitáře v době kopírování:
 
 \documentclass[
     % Velikost základního písma je 12 bodů
@@ -31,7 +30,7 @@
     tmargin=25mm,
     bmargin=25mm,
     % Vnitřní a vnější okraj
-    lmargin=20mm,                                                               %default 30mm
+    lmargin=20mm,                   %default 30mm
     rmargin=20mm,
     % Velikost zápatí
     footskip=17mm,
@@ -77,11 +76,11 @@
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0em}
 
-% Bezpatkové sázení nadpisů
+% Bezpatkové sázení nadpisů (vypnute pre styl nadpisov rovnakym fontom ako zvysok dokumentu)
 %\allsectionsfont{\sffamily}
 % Změna formátování nadpisu a podnadpisů v Obsahu
 %\renewcommand{\cfttoctitlefont}{\Large\bfseries\sffamily}
-%\renewcommand{\cftsubsecdotsep}{\cftdotsep}                                %vypnute pre klasicky styl nadpisov
+%\renewcommand{\cftsubsecdotsep}{\cftdotsep}
 
 % Použití moderní/aktualizované sady písem
 \usepackage{lmodern}
@@ -203,10 +202,6 @@
     % \docminted není 'true', nic neprovádíme
     % Pokud je v dokumentu 'minted' prostředí, dokument se nepodaří přeložit.
 }
-
-%%%%%%%%%%%
-% TITULKA %
-%%%%%%%%%%%
 
 \IfFileExists{./.repo.tex}{
     % Soubor '.repo.tex' může (re)definovat povinné a nepovinné argumenty
