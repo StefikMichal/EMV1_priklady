@@ -1,0 +1,53 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%														%
+%     Tuto Šablonu vytvořil Ing. Pavel Čudek, Ph.D.     %
+%			pro potřeby předmětů DME a DIZ 				%
+%														%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                       %
+% Tento soubor slouží ke generování titulní strany      %
+% protokolu. Nic v tomto dokumentu neměňte. Titulní     %
+% strana se generuje automaticky z hodnot zadaných      %
+% v souboru protokol.tex                                %
+%                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+	%\begin{tikzpicture}[remember picture, overlay]
+	%	\draw[line width = 2pt] ($(current page.north west) + (1cm,-1cm)$) rectangle ($(current page.south east) + (-1cm,1cm)$);
+	%\end{tikzpicture}
+
+	\begin{center}
+		\vspace{-1.5cm}
+		
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[width=0.8\textwidth]{images/UETE_Color_RGB_CZ.png}
+		\end{figure}
+		
+		\vspace{4cm}
+	
+		\LARGE{\textbf{\predmet}}\\
+		\vspace{1cm}
+
+		\textbf{\dokument}\\
+		\vspace{0.5cm}
+
+		\large{Verze: \verze} \\
+		
+		%zmazat
+		\color{red}
+		\today \\
+		zadania 2023/2024 a 2024/2025 - skontroluj, mali by byt rovnake \\
+		chyby vyhradene - nenesiem ziadnu zodpovednost! \\
+		nejedna sa o oficialny material, iba pomocku na ucenie
+		\color{black}
+		
+		\vfill
+
+		\Large\begin{tabular}{ll}
+			Autor:      & \autor     \\
+		\end{tabular}
+		\hfill
+	\end{center}
+\end{titlepage}
