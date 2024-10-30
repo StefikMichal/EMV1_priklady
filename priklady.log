@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.26)  30 OCT 2024 16:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.26)  30 OCT 2024 16:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -848,7 +848,13 @@ File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
 \AM@lof@heading=\toks42
 \c@AM@survey=\count357
 \AM@templatesizebox=\box159
-) (C:\MiKTeX_INSTALL\tex/latex/placeins\placeins.sty
+) (C:\MiKTeX_INSTALL\tex/latex/tablefootnote\tablefootnote.sty
+Package: tablefootnote 2014/01/26 v1.1c Table foot notes (HMM)
+ (C:\MiKTeX_INSTALL\tex/latex/xifthen\xifthen.sty
+Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
+ (C:\MiKTeX_INSTALL\tex/latex/ifmtarg\ifmtarg.sty
+Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
+))) (C:\MiKTeX_INSTALL\tex/latex/placeins\placeins.sty
 Package: placeins 2005/04/18  v 2.2
 ) (C:\MiKTeX_INSTALL\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
@@ -1207,15 +1213,15 @@ Package rerunfilecheck Info: File `priklady.out' has not changed.
 (rerunfilecheck)             Checksum: 91A9A59859E86F1595DB66E4D8F4E6CE;277.
  ) 
 Here is how much of TeX's memory you used:
- 37303 strings out of 476366
- 759864 string characters out of 2800897
+ 37441 strings out of 476366
+ 763028 string characters out of 2800897
  1883324 words of memory out of 3000000
- 57020 multiletter control sequences out of 15000+600000
+ 57147 multiletter control sequences out of 15000+600000
  561737 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,12n,157p,722b,1053s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/MiKTeX_INSTALL/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/MiKTeX_INSTALL/fonts/enc/dvips/lm/lm-mathit.enc}{C:/MiKTeX_INSTALL/fonts/enc/dvips/lm/lm-rm.enc}{C:/MiKTeX_INSTALL/fonts/enc/dvips/lm/lm-ec.enc}<C:/MiKTeX_INSTALL/fonts/type1/public/lm/lmbx12.pfb><C:/MiKTeX_INSTALL/fonts/type1/public/lm/lmmi12.pfb><C:/MiKTeX_INSTALL/fonts/type1/public/lm/lmmi6.pfb><C:/MiKTeX_INSTALL/fonts/type1/public/lm/lmmi8.pfb><C:/MiKTeX_INSTALL/fonts/type1/public/lm/lmr12.pfb><C:/MiKTeX_INSTALL/fonts/type1/public/lm/lmr17.pfb><C:/MiKTeX_INSTALL/fonts/type1/public/lm/lmr8.pfb><C:/MiKTeX_INSTALL/fonts/type1/public/lm/lmsy10.pfb><C:/MiKTeX_INSTALL/fonts/type1/public/lm/lmsy6.pfb><C:/MiKTeX_INSTALL/fonts/type1/public/lm/lmsy8.pfb>
-Output written on priklady.pdf (11 pages, 4683761 bytes).
+Output written on priklady.pdf (11 pages, 4683515 bytes).
 PDF statistics:
  135 PDF objects out of 1000 (max. 8388607)
  23 named destinations out of 1000 (max. 500000)
