@@ -143,7 +143,7 @@ v němž $A [\SI{}{\ohm\meter}]$ a $B [\SI{}{\kelvin}]$ jsou materiálové konst
 %------------------------------------------------------------
 
 \subsection*{5)}
-Měřením dynamické viskozity transformátorového oleje BTS2 na Höpplerově viskozimetru byly při několika teplotách zjištěny údaje uvedené v tabulce. Stanovte rezistivitu tohoto oleje při teplotách \SI{50}{\degreeCelsius} a \SI{85}{\degreeCelsius}, je li hodnota rezistivity při teplotě \SI{20}{\degreeCelsius} rovna \SI{8e11}{\ohm\meter}. Při výpočtu předpokládejte, že při změně teploty se nemění koncentrace volných iontů v oleji. \\
+Měřením dynamické viskozity transformátorového oleje BTS2 na Höpplerově viskozimetru byly při několika teplotách zjištěny údaje uvedené v tabulce. Stanovte rezistivitu tohoto oleje při teplotách \SI{50}{\degreeCelsius} a \SI{85}{\degreeCelsius}, je li hodnota rezistivity při teplotě \SI{20}{\degreeCelsius} rovna \SI{3e11}{\ohm\meter}. Při výpočtu předpokládejte, že při změně teploty se nemění koncentrace volných iontů v oleji. \\
 \textbf{Tabulka:}
 \begin{table}[H]
     \centering
@@ -224,17 +224,28 @@ Určete ztrátový činitel vzduchu za normálních fyzikálních podmínek a p�
 Komplexní permitivita $\varepsilon^*$ dielektrika je definována vztahem ${\varepsilon^{*}}={\varepsilon^{'}}-{j\varepsilon^{''}}$. V závislosti na kmitočtu lze podle Debyeho vyjádřit komplexní permitivitu rovnicí
 \begin{equation}
     {\varepsilon^{*}}={\varepsilon_\infty}+\frac{{\varepsilon_s}-{\varepsilon_\infty}}{1+j\omega\tau}
+    \label{eq:komplex_permitivita_Deby}
 \end{equation}
 v níž $\varepsilon_s$ značí relativní (statickou) permitivitu dielektrika určenou při kmitočtu $f\rightarrow 0$, $\varepsilon_\infty$ relativní (optickou) permitivitu určenou při velmi vysokých kmitočtech; $\tau$ je relaxační doba, která je mimo jiné i funkcí teploty. \textbf{Vyjděte z obou uvedených vztahů
 a určete reálnou část $\varepsilon{'}$ a imaginární část $\varepsilon{''}$ komplexní permitivity}.
 
-\begin{figure*}[h]
-    \centering
-    \includegraphics*[width=\textwidth]{images/diel9.png}
-\end{figure*}
+Rozdelením rovnice (\ref{eq:komplex_permitivita_Deby}) na reálnu a imaginárnu zložku dostaneme:
+
+\begin{equation*}
+    {\varepsilon^{*}}={\varepsilon_\infty}+\frac{{\varepsilon_s}-{\varepsilon_\infty}}{1+j\omega\tau}={\varepsilon_\infty}+\frac{{\varepsilon_s}-{\varepsilon_\infty}}{1+j\omega\tau}\cdot\frac{1-j\omega\tau}{1-j\omega\tau}={\varepsilon_\infty}+\frac{{\varepsilon_s}-{\varepsilon_\infty}}{1+{\omega}^2{\tau}^2}-j \frac{\omega\tau({\varepsilon_s}-{\varepsilon_\infty})}{1+{\omega}^2{\tau}^2}
+\end{equation*}
+
+Porovnaním s rovnicou ${\varepsilon^{*}}={\varepsilon^{'}}-{j\varepsilon^{''}}$ dostávame:
+
+\begin{equation*}
+    {\varepsilon^{'}}={\varepsilon_\infty}+\frac{{\varepsilon_s}-{\varepsilon_\infty}}{1+{\omega}^2{\tau}^2}=\frac{{\varepsilon_s}+{\varepsilon_\infty}{\omega}^2{\tau}^2}{1+{\omega}^2{\tau}^2} \tag{Reálna časť}
+\end{equation*}
+
+\begin{equation*}
+    {\varepsilon^{''}}=\frac{\omega\tau({\varepsilon_s}-{\varepsilon_\infty})}{1+{\omega}^2{\tau}^2} \tag{Imaginárna časť}
+\end{equation*}
 
 \color{red}Poznámka: Tento príklad \textbf{nebol riešený vrámci cvičenia}. Je prevzatý zo skrípt (BPC-EMV skripta 2019, strana 86 č. 10) a takisto ho možno nájsť aj v prednáškach (Prednáška č. 2, strany~14 - 18). \\
-Ak budem mať čas, príklad prepíšem v lepšej podobe do dokumentu.
 
 \color{black}
 
