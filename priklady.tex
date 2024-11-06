@@ -191,6 +191,14 @@ A jelikož $\ln x = 2,3 \cdot \log x$:
     \log \varepsilon_{rs} = V_1 \cdot \log \varepsilon_{r1} + V_2 \cdot \log \varepsilon_{r2}
 \end{equation*}
 
+\noindent\rule{8cm}{0.4pt}
+
+Vysvětlivky:
+
+\begin{tabular}{rcl}
+    $k$ & = & empirická konstanta \\
+\end{tabular}
+
 \newpage
 
 %------------------------------------------------------------
@@ -198,17 +206,73 @@ A jelikož $\ln x = 2,3 \cdot \log x$:
 \subsection*{3)}
 Mezi elektrodami deskového kondenzátoru o rozměrech 7x12 \SI{}{\centi\meter} a vzdálenosti elektrod \SI{5}{\milli\meter} je vložena destička z polystyrenu o tloušťce \SI{3}{\milli\meter}. Zbytek prostoru mezi elekrodami je vyplněn vzduchem za normálních atmosférických podmínek. Vypočtěte kapacitu tohoto kondenzátoru, je-li relativní permitivita polystyrenu při teplotě \SI{20}{\degreeCelsius} rovna 2,3. Jak se změní kapacita kondenzátoru, je-li celý prostor mezi elektrodami vyplněn pěnovým polystyrenem, v němž je objemový podíl polystyrenu a vzduchu stejný jako v prvém případě?
 
+% Původní příklad v ručně psané podobě
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.80\textwidth]{images/diel3.jpg}
+%\end{figure*}
+%
+%\newpage
+%
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.85\textwidth]{images/diel3_1.jpg}
+%\end{figure*}
+
+$S = 7 \times 12 \; \si{\centi\meter}$ = rozměry elektrod kondenzátoru\\
+$h = 5 \; \si{\milli\meter}$ = vzdálenost elektrod kondenzátoru\\
+$h_1 = 3 \; \si{\milli\meter}$ = tloušťka polystyrenové destičky\\
+$\varepsilon_{r1} = 2,3$ (polystyren)\\
+$\varepsilon_{r2} = 1$ (vzduch)\\
+\noindent\rule{8cm}{0.4pt}
+
+Sériově zapojené kondenzátory (k = -1):
+
 \begin{figure*}[h]
     \centering
-    \includegraphics*[width=0.80\textwidth]{images/diel3.jpg}
+    \includegraphics[width=.2\textwidth]{images/ul3_C1.jpg}
 \end{figure*}
+
+\begin{align*}
+    \varepsilon_{rs}^{-1} &= V_1 \cdot \varepsilon_{r1}^{-1} + V_2 \cdot \varepsilon_{r2}^{-1} \\
+    \frac{1}{\varepsilon_{rs}} &= V_1 \cdot \frac{1}{\varepsilon_{r1}} + V_2 \cdot \frac{1}{\varepsilon_{r2}} \\
+    \frac{1}{\varepsilon_{rs}} &= \frac{3}{5} \cdot \frac{1}{\varepsilon_{r1}} + \frac{2}{5} \cdot \frac{1}{1} \\
+    \frac{1}{\varepsilon_{rs}} &= 0,661 \\
+    \varepsilon_{rs} &= \frac{1}{\varepsilon_{rs}} \\
+    \varepsilon_{rs} &= 1,513 \; [-]
+\end{align*}
+
+\begin{equation*}
+    C = \varepsilon_0 \cdot \varepsilon_{rs} \cdot \frac{S}{h} = 8,854 \cdot 10^{-12} \cdot 1,513 \cdot \frac{0,07 \cdot 0,12}{5 \cdot 10^{-3}} = 22,51 \; \si{\pico\farad}
+\end{equation*}
 
 \newpage
 
+k = 0 (homogenní směs):
+
 \begin{figure*}[h]
     \centering
-    \includegraphics*[width=0.85\textwidth]{images/diel3_1.jpg}
+    \includegraphics[width=.7\textwidth]{images/ul3_C3.jpg}
 \end{figure*}
+
+\begin{align*}
+    \log(\varepsilon_{rs}) &= V_1 \cdot \log(\varepsilon_{r1}) + V_2 \cdot \log(\varepsilon_{r2}) \\
+    \log(\varepsilon_{rs}) &= \frac{3}{5} \cdot \log(2,3) + \frac{2}{5} \cdot \log(1) \\
+    log(\varepsilon_{rs}) &= 0,217 \\
+    \varepsilon_{rs} &= 10^{0,217} = 1,648 \; [-]
+\end{align*}
+
+\begin{equation*}
+    C = \varepsilon_0 \cdot \varepsilon_{rs} \cdot \frac{S}{h} = 8,854 \cdot 10^{-12} \cdot 1,648 \cdot \frac{0,07 \cdot 0,12}{5 \cdot 10^{-3}} = 24,51 \; \si{\pico\farad}
+\end{equation*}
+
+Kapacita se změnila cca o 2 \si{\pico\farad} ($\approx$ 10 \si{\percent}).
+
+\noindent\rule{8cm}{0.4pt}
+
+Vysvětlivky:
+
+V\textsubscript{1} a V\textsubscript{2} jsou objemové poměry, jejich hodnota vyplývá ze zadání a nákresů.
 
 \newpage
 
@@ -225,6 +289,8 @@ v němž $A [\SI{}{\ohm\meter}]$ a $B [\SI{}{\kelvin}]$ jsou materiálové konst
     \centering
     \includegraphics*[width=0.75\textwidth]{images/diel4.jpg}
 \end{figure*}
+
+
 
 \newpage
 
