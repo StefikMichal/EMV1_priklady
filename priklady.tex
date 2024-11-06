@@ -10,8 +10,8 @@
 
 \newcommand{\predmet}{Elektrotechnické materiály a výrobní procesy I}
 \newcommand{\dokument}{Neoficiální sbírka příkladů částí dielektrických materiálů a polovodičů}
-\newcommand{\autor}{cinanko}
-\newcommand{\verze}{0.5}
+\newcommand{\autor}{cinanko, Šťur}
+\newcommand{\verze}{0.6}
 
 %\usepackage{fancyhdr}
 %\setlength{\headsep}{5pt}
@@ -79,10 +79,51 @@ Platné při teplotě $T=\SI{300}{\kelvin}$
 \subsection*{1)}
 Elektronová polarizovatelnost $\alpha_e$ atomu argonu je \SI{1,43e-40}{\farad\meter\squared}. Určete relativní permitivitu argonu při normálních fyzikálních podmínkách.
 
-\begin{figure*}[h]
-    \centering
-    \includegraphics*[width=0.80\textwidth]{images/diel1.jpg}
-\end{figure*}
+% Původní příklad v ručně psané podobě
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.80\textwidth]{images/diel1.jpg}
+%\end{figure*}
+
+$\upalpha_E = 1,43 \cdot 10^{-40} \; \si{\farad\meter\squared}$\\
+$\upvarepsilon_r = ?$ \\
+\noindent\rule{8cm}{0.4pt}
+
+Claussius - Mossotiho rovnice (C-M):
+
+\begin{equation*}
+    \frac{\varepsilon_r - 1}{\varepsilon_r + 2} = \frac{n \cdot \alpha}{3 \cdot \varepsilon_0} \\
+\end{equation*}
+
+Argon = inertní plyn $\Rightarrow  \varepsilon_r \approx 1$
+
+\begin{equation*}
+    \frac{\varepsilon_r - 1}{1 + 2} = \frac{n \cdot \alpha}{3 \cdot \varepsilon_0}
+\end{equation*}
+
+\begin{equation*}
+    \frac{\varepsilon_r - 1}{\cancel{3}} = \frac{n \cdot \alpha}{\cancel{3} \cdot \varepsilon_0}
+\end{equation*}
+
+\begin{equation*}
+    \varepsilon_r= \frac{n \cdot \alpha}{\varepsilon_0} + 1
+\end{equation*}
+
+n = n\textsubscript{L} = Loshnidtovo číslo = počet atomů v 1 \si{\cubic\meter} \textbf{plynu} (pro pevné látky jde o hodnotu o 2 až 3 řády větší)
+
+\begin{equation*}
+    \varepsilon_r = \frac{n_L \cdot \alpha}{\varepsilon_0} + 1 = \frac{2,688 \cdot 10^{25} \cdot 1,43 \cdot 10^{-40}}{8,854 \cdot 10^{-12}} + 1 = 1,000434 \; [-]
+\end{equation*}
+
+\noindent\rule{8cm}{0.4pt}
+
+Vysvětlivky:
+
+\begin{tabular}{rcl}
+    $\upalpha$ & = & polarizovatelnost \\
+    $\upvarepsilon_0$ & = & permitivita vakua (konstanta) \\
+    n & = & počet atomů v 1 \si{\cubic\meter} látky
+\end{tabular}
 
 \newpage
 
@@ -91,17 +132,72 @@ Elektronová polarizovatelnost $\alpha_e$ atomu argonu je \SI{1,43e-40}{\farad\m
 \subsection*{2)}
 Relativní permitivita $\varepsilon_{rs}$ složeného ze dvou vzájemně nereagujících látek o permitivitách $\varepsilon_{r1}$ a $\varepsilon_{r2}$ se často určuje Lichteneckerovým mocninovým vztahem
 \begin{equation}
-    {{\varepsilon_{rs}}^k}={v_1{\varepsilon_{r1}}^k}+{v_2{\varepsilon_{r2}}^k}
+    {{\varepsilon_{rs}}^k}={V_1{\varepsilon_{r1}}^k}+{V_2{\varepsilon_{r2}}^k}
 \end{equation}
-v němž $v_1$ a $v_2$ jsou poměrné objemové podíly obou látek a $k$ je empirická konstanta. Hodnota konstanty $k$ se mění v rozsahu $<-1; +1>$ podle tvaru a rozložení částic obou látek; při chaotickém uspořádání částic $k\rightarrow 0$. Ukažte, že v tomto případě přechází mocninový vztah ve vztah logaritmický:
+v němž $V_1$ a $V_2$ jsou poměrné objemové podíly obou látek a $k$ je empirická konstanta. Hodnota konstanty $k$ se mění v rozsahu $<-1; +1>$ podle tvaru a rozložení částic obou látek; při chaotickém uspořádání částic $k\rightarrow 0$. Ukažte, že v tomto případě přechází mocninový vztah ve vztah logaritmický:
 \begin{equation}
-    {\log{\varepsilon_{rs}}}={v_1\log{\varepsilon_{r1}}}+{v_2\log{\varepsilon_{r2}}}
+    {\log{\varepsilon_{rs}}}={V_1\log{\varepsilon_{r1}}}+{V_2\log{\varepsilon_{r2}}}
 \end{equation}
 
-\begin{figure*}[h]
-    \centering
-    \includegraphics*[width=0.75\textwidth]{images/diel2.jpg}
-\end{figure*}
+% Původní příklad v ručně psané podobě
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.75\textwidth]{images/diel2.jpg}
+%\end{figure*}
+
+\begin{equation*}
+    \varepsilon_{rs}^k = V_1 \cdot \varepsilon_{r1}^k + V_2 \cdot \varepsilon_{r2}^k
+\end{equation*}
+
+\begin{equation*}
+    \alpha^x = 1 + \underbrace{\frac{x \cdot \ln a}{1!}}_{\textrm{malý příspěvek, když} \; x \rightarrow 0} + \overbrace{\frac{x^2 \cdot \ln a^2}{2!}}^{\textrm{řádově ještě měnší}} + \dots 
+\end{equation*}
+
+Pokud $x\rightarrow 0$:
+
+\begin{equation*}
+    a^x \doteq 1 + \frac{x \cdot \ln a}{1}
+\end{equation*}
+
+Na základě toho:
+
+\begin{equation*}
+    1 + \frac{k \cdot \ln \varepsilon_{rs}}{1} = V_1 \cdot \left( 1 + \frac{k \cdot \ln \varepsilon_{r1}}{1} \right) + V_2 \cdot \left( 1 + \frac{k \cdot \ln \varepsilon_{r2}}{1} \right)
+\end{equation*}
+ 
+V\textsubscript{1} a V\textsubscript{2} jsou objemové podíly, dohromady tedy dají 1
+
+\begin{equation*}
+    \cancel{1} + k \cdot \ln \varepsilon_{rs} = \cancel{V_1} + V_1 \cdot k \cdot \ln \varepsilon_{r1} + \cancel{V_2} + V_2 \cdot k \cdot \ln \varepsilon_{r2}
+\end{equation*}
+
+k je v každém členu, možno vykrátit
+
+\begin{equation*}
+    \cancel{k} \cdot \ln \varepsilon_{rs} = V_1 \cdot \cancel{k} \cdot \ln \varepsilon_{r1} + V_2 \cdot \cancel{k} \cdot \varepsilon_{r2}
+\end{equation*}
+
+\begin{equation*}
+    \ln \varepsilon_{rs} = V_1 \cdot \ln \varepsilon_{r1} + V_2 \cdot \ln \varepsilon_{r2}
+\end{equation*}
+
+A jelikož $\ln x = 2,3 \cdot \log x$:
+
+\begin{equation*}
+    \cancel{2,3} \cdot \log \varepsilon_{rs} = V_1 \cdot \cancel{2,3} \cdot \log \varepsilon_{r1} + V_2 \cdot \cancel{2,3} \cdot \log \varepsilon_{r2}
+\end{equation*}
+
+\begin{equation*}
+    \log \varepsilon_{rs} = V_1 \cdot \log \varepsilon_{r1} + V_2 \cdot \log \varepsilon_{r2}
+\end{equation*}
+
+\noindent\rule{8cm}{0.4pt}
+
+Vysvětlivky:
+
+\begin{tabular}{rcl}
+    $k$ & = & empirická konstanta \\
+\end{tabular}
 
 \newpage
 
@@ -110,17 +206,73 @@ v němž $v_1$ a $v_2$ jsou poměrné objemové podíly obou látek a $k$ je emp
 \subsection*{3)}
 Mezi elektrodami deskového kondenzátoru o rozměrech 7x12 \SI{}{\centi\meter} a vzdálenosti elektrod \SI{5}{\milli\meter} je vložena destička z polystyrenu o tloušťce \SI{3}{\milli\meter}. Zbytek prostoru mezi elekrodami je vyplněn vzduchem za normálních atmosférických podmínek. Vypočtěte kapacitu tohoto kondenzátoru, je-li relativní permitivita polystyrenu při teplotě \SI{20}{\degreeCelsius} rovna 2,3. Jak se změní kapacita kondenzátoru, je-li celý prostor mezi elektrodami vyplněn pěnovým polystyrenem, v němž je objemový podíl polystyrenu a vzduchu stejný jako v prvém případě?
 
+% Původní příklad v ručně psané podobě
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.80\textwidth]{images/diel3.jpg}
+%\end{figure*}
+%
+%\newpage
+%
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.85\textwidth]{images/diel3_1.jpg}
+%\end{figure*}
+
+$S = 7 \times 12 \; \si{\centi\meter}$ = rozměry elektrod kondenzátoru\\
+$h = 5 \; \si{\milli\meter}$ = vzdálenost elektrod kondenzátoru\\
+$h_1 = 3 \; \si{\milli\meter}$ = tloušťka polystyrenové destičky\\
+$\varepsilon_{r1} = 2,3$ (polystyren)\\
+$\varepsilon_{r2} = 1$ (vzduch)\\
+\noindent\rule{8cm}{0.4pt}
+
+Sériově zapojené kondenzátory (k = -1):
+
 \begin{figure*}[h]
     \centering
-    \includegraphics*[width=0.80\textwidth]{images/diel3.jpg}
+    \includegraphics[width=.2\textwidth]{images/ul3_C1.jpg}
 \end{figure*}
+
+\begin{align*}
+    \varepsilon_{rs}^{-1} &= V_1 \cdot \varepsilon_{r1}^{-1} + V_2 \cdot \varepsilon_{r2}^{-1} \\
+    \frac{1}{\varepsilon_{rs}} &= V_1 \cdot \frac{1}{\varepsilon_{r1}} + V_2 \cdot \frac{1}{\varepsilon_{r2}} \\
+    \frac{1}{\varepsilon_{rs}} &= \frac{3}{5} \cdot \frac{1}{2,3} + \frac{2}{5} \cdot \frac{1}{1} \\
+    \frac{1}{\varepsilon_{rs}} &= 0,661 \\
+    \varepsilon_{rs} &= \frac{1}{\varepsilon_{rs}} \\
+    \varepsilon_{rs} &= 1,513 \; [-]
+\end{align*}
+
+\begin{equation*}
+    C = \varepsilon_0 \cdot \varepsilon_{rs} \cdot \frac{S}{h} = 8,854 \cdot 10^{-12} \cdot 1,513 \cdot \frac{0,07 \cdot 0,12}{5 \cdot 10^{-3}} = 22,51 \; \si{\pico\farad}
+\end{equation*}
 
 \newpage
 
+k = 0 (homogenní směs):
+
 \begin{figure*}[h]
     \centering
-    \includegraphics*[width=0.85\textwidth]{images/diel3_1.jpg}
+    \includegraphics[width=.7\textwidth]{images/ul3_C3.jpg}
 \end{figure*}
+
+\begin{align*}
+    \log(\varepsilon_{rs}) &= V_1 \cdot \log(\varepsilon_{r1}) + V_2 \cdot \log(\varepsilon_{r2}) \\
+    \log(\varepsilon_{rs}) &= \frac{3}{5} \cdot \log(2,3) + \frac{2}{5} \cdot \log(1) \\
+    log(\varepsilon_{rs}) &= 0,217 \\
+    \varepsilon_{rs} &= 10^{0,217} = 1,648 \; [-]
+\end{align*}
+
+\begin{equation*}
+    C = \varepsilon_0 \cdot \varepsilon_{rs} \cdot \frac{S}{h} = 8,854 \cdot 10^{-12} \cdot 1,648 \cdot \frac{0,07 \cdot 0,12}{5 \cdot 10^{-3}} = 24,51 \; \si{\pico\farad}
+\end{equation*}
+
+Kapacita se změnila cca o 2 \si{\pico\farad} ($\approx$ 10 \si{\percent}).
+
+\noindent\rule{8cm}{0.4pt}
+
+Vysvětlivky:
+
+V\textsubscript{1} a V\textsubscript{2} jsou objemové poměry, jejich hodnota vyplývá ze zadání a nákresů.
 
 \newpage
 
@@ -133,10 +285,40 @@ Rezistivitu elektroizolačních kapalin $\rho_v$ lze v závislosti na teplotě v
 \end{equation}
 v němž $A [\SI{}{\ohm\meter}]$ a $B [\SI{}{\kelvin}]$ jsou materiálové konstanty; teplota T je udána v \SI{}{\kelvin}. Kabelový impregnant složený z minerálního oleje s přídavkem \SI{25}{\percent} (hmotnostních) rafinované kalafuny má při teplotě \SI{20}{\degreeCelsius} rezistivitu \SI{2e10}{\ohm\meter}. Stanovte rezistivitu tohoto impregnantu při teplotách \SI{50}{\degreeCelsius} a \SI{80}{\degreeCelsius}, je li součinitel $B$ roven \SI{7e3}{\kelvin}.
 
-\begin{figure*}[h]
-    \centering
-    \includegraphics*[width=0.75\textwidth]{images/diel4.jpg}
-\end{figure*}
+% Původní příklad v ručně psané podobě
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.75\textwidth]{images/diel4.jpg}
+%\end{figure*}
+
+$\rho = A \cdot e^\frac{B}{T}$\\
+A [\si{\ohm\meter}], B [\si{\kelvin}] = materiálové konstanty (neměnné s teplotou)\\
+B = \SI{7e3}{\kelvin}\\
+\noindent\rule{8cm}{0.4pt}
+
+20 \si{\celsius} = 293,15 \si{\kelvin}:
+
+\begin{equation*}
+    \rho_{20} = 2 \cdot 10^{10} \; \si{\ohm\meter}
+\end{equation*}
+
+\begin{equation*}
+    A = \frac{\rho_{20}}{e^\frac{B}{T}} = \frac{2 \cdot 10^{10}}{e^\frac{7 \cdot 10^3}{293,15}} = 0,8525 \; \si{\ohm\meter}
+\end{equation*}
+
+50 \si{\celsius} = 323,15 \si{\kelvin}:
+
+\begin{equation*}
+    \rho_{50} = A \cdot e^\frac{B}{T} = 0,8525 \cdot e^\frac{7 \cdot 10^3}{323,15} = 2,179 \cdot 10^9 \; \si{\ohm\meter}
+\end{equation*}
+
+80 \si{\celsius} = 353,15 \si{\kelvin}:
+
+\begin{equation*}
+    \rho_{80} = A \cdot e^\frac{B}{T} = 0,8525 \cdot e^\frac{7 \cdot 10^3}{353,15} = 0,346 \cdot 10^9 \; \si{\ohm\meter}
+\end{equation*}
+
+Z výpočtu vyplývá, že s rostoucí teplotou klesá rezistivita elektroizolačních materiálů.
 
 \newpage
 
@@ -160,17 +342,86 @@ Měřením dynamické viskozity transformátorového oleje BTS2 na Höpplerově 
     \end{tblr}
 \end{table}
 
-\begin{figure*}[h]
-    \centering
-    \includegraphics*[width=0.75\textwidth]{images/diel5.jpg}
-\end{figure*}
+% Původní příklad v ručně psané podobě
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.75\textwidth]{images/diel5.jpg}
+%\end{figure*}
+%
+%\newpage
+%
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.85\textwidth]{images/diel5_1.jpg}
+%\end{figure*}
+
+$\rho_{20} = 3 \cdot 10^{11} \; \si{\ohm\meter}$\\
+$\rho_{50,85} = ?$\\
+$\rho = A \cdot e^\frac{B}{T}$\\
+$\eta \cdot \gamma = k$\\
+\noindent\rule{8cm}{0.4pt}
+
+Neznáme A, B, můžeme vytvořit soustavu se 2 teplotami z tabulky.
+
+\begin{equation*}
+    \frac{\eta}{\rho} = k \Rightarrow \rho = \frac{\eta}{k}
+\end{equation*}
+
+\begin{align*}
+    \frac{\eta_1}{k} &= A \cdot e^\frac{B}{T_1}\\
+    \frac{\eta_2}{k} &= A \cdot e^\frac{B}{T_2}
+\end{align*}
+
+\begin{center}
+    \noindent\rule{5cm}{0.4pt}
+\end{center}
+
+\begin{align*}
+    \ln \left( \frac{\eta_1}{k} \right) & = \ln A + \frac{B}{T_1}\\
+    \ln \left( \frac{\eta_2}{k} \right) & = - \ln A - \frac{B}{T_2}
+\end{align*}
+
+\begin{center}
+    \noindent\rule{5cm}{0.4pt}
+\end{center}
 
 \newpage
 
-\begin{figure*}[h]
-    \centering
-    \includegraphics*[width=0.85\textwidth]{images/diel5_1.jpg}
-\end{figure*}
+\begin{align*}
+    \ln \left( \frac{\frac{\eta_1}{\cancel{k}}}{\frac{\eta_2}{\cancel{k}}} \right) &= \frac{B}{T_1} - \frac{B}{T_2} \\
+    \ln \left( \frac{\eta_1}{\eta_2} \right) &= B \cdot \left( \frac{1}{T_1} - \frac{1}{T_2} \right) \\
+    B &= \frac{\ln \left( \frac{\eta_1}{\eta_2} \right)}{\left( \frac{1}{T_1} - \frac{1}{T_2} \right)}
+\end{align*}
+
+Dosadíme z tabulky pro 20 \si{\celsius} a 40 \si{\celsius}:
+
+\begin{equation*}
+    B = \frac{\ln \left( \frac{4,35 \cdot 10^{-2}}{1,21 \cdot 10^{-2}} \right)}{\left( \frac{1}{293,15} - \frac{1}{313,15} \right)} = 5873,15 \; \si{\kelvin}
+\end{equation*}
+
+Nalezení A:
+
+\begin{align*}
+    \rho_{20} &= A \cdot e^{\frac{B}{T_{20}}} \\
+    3 \cdot 10^{11} &= A \cdot e^\frac{5873,15}{293,15} \\
+    A &= \frac{3 \cdot 10^{11}}{e^\frac{5873,15}{293,15}} = 597,3 \; \si{\ohm\meter}
+\end{align*}
+
+Nyní můžeme spočítat rezistivity stejným způsobem jako v příkladu 4.
+
+50 \si{\celsius} = 323,15 \si{\kelvin}:
+
+\begin{equation*}
+    \rho_{50} = A \cdot e^\frac{B}{323,15} = 597,3 \cdot e^\frac{5873,15}{323,15} = 46,704\cdot 10^9 \; \si{\ohm\meter}
+\end{equation*}
+
+85 \si{\celsius} = 358,15 \si{\kelvin}:
+
+\begin{equation*}
+    \rho_{85} = A \cdot e^\frac{B}{358,15} =  597,3 \cdot e^\frac{5873,15}{358,15} = 7,907 \cdot 10^9 \; \si{\ohm\meter}
+\end{equation*}
+
+S rostoucí teplotou se tedy snižuje viskozita a zároveň klesá rezistivita.
 
 \newpage
 
@@ -180,29 +431,85 @@ Měřením dynamické viskozity transformátorového oleje BTS2 na Höpplerově 
 V obvodu střídavého elektrického proudu je zapojen kondenzátor, jehož dielektrikum vykazuje ztráty. Chování tohoto kondenzátoru lze za předpokladu, že pochody v dielektriku jsou lineární vyšetřit sledováním ekvivalentního dvouprvkového náhradního zapojení kondenzátoru s ideálním, bezztrátovým dielektrikem a odporu představujícího ztráty. Uvažujte, že kondenzátor s ideálním dielektrikem o kapacitě $C_p$ a odpor $R_p$ jsou v náhradním zapojení spojeny paralelně a že je na uvedenou soustavu připojeno napětí $U$. \\
 Nakreslete pro tento případ fázorový diagram napětí a proudů soustavy a určete ztrátový činitel, celkovou impedanci a celkové ztráty energie v soustavě.
 
+% Původní příklad v ručně psané podobě
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.95\textwidth]{images/diel6.jpg}
+%\end{figure*}
+%
+%\newpage
+%
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=\textwidth]{images/diel6_1.jpg}
+%\end{figure*}
+
+Paralelní náhradní zapojení:
 \begin{figure*}[h]
     \centering
-    \includegraphics*[width=0.95\textwidth]{images/diel6.jpg}
+    \includegraphics[width=.7\textwidth]{images/ul6_sch.jpg}
 \end{figure*}
 
-\newpage
+Kondenzátor (C) - nejprve proud, potom napětí\\
+tan (tg) - protilehlá ku přilehlé\\
+X\textsubscript{C} - kapacitní reaktance\\
+Z\textsubscript{C} - komplexní impedance
 
-\begin{figure*}[h]
-    \centering
-    \includegraphics*[width=\textwidth]{images/diel6_1.jpg}
-\end{figure*}
+\begin{equation*}
+    \tan \delta = \frac{I_R}{I_C} = \frac{\frac{\cancel{U}}{R_p}}{\frac{\cancel{U}}{\omega \cdot C_p}} = \frac{\frac{1}{\omega \cdot C_p}}{\frac{R_p}{1}} = \frac{1}{R_P \cdot \omega \cdot C_p} = \frac{X_c}{R_p} = \frac{1}{\omega \cdot R_p \cdot C_p} 
+\end{equation*}
 
-\newpage
+\begin{equation*}
+    \Rightarrow R_p = \frac{1}{\tan \delta \cdot \omega \cdot C_p}
+\end{equation*}
+
+\begin{equation*}
+    P_z = U \cdot I_R = U \cdot \frac{U}{R_p} = \frac{U^2}{\underbrace{R_p}_{\frac{1}{\tan \delta \cdot \omega \cdot C_p}}} = U^2 \cdot \tan \delta \cdot \omega \cdot C_p
+\end{equation*}
+
+\begin{equation*}
+    Z_C = \frac{1}{j \cdot \omega \cdot C_p} \cdot \frac{j}{j} = - \frac{j}{\omega \cdot C_p}
+\end{equation*}
+
+\begin{equation*}
+    Z_p = \frac{Z_C \cdot R_p}{Z_C + R_p} = \frac{- \frac{j \cdot R_p}{\omega \cdot C_p}}{- \frac{j}{\omega \cdot C_p} + R_p} = \frac{\frac{-j \cdot R_p}{\cancel{\omega \cdot C_p}}}{\frac{-j + \omega \cdot C_p \cdot R_p}{\cancel{\omega \cdot C_p}}} = \frac{j \cdot R_p}{j - \omega \cdot C_p \cdot R_p} \cdot \underbrace{\frac{j + \omega \cdot C_p \cdot R_p}{j + \omega \cdot C_p \cdot R_p}}_{\textrm{Cmpx sdružené číslo}} =
+\end{equation*}
+\begin{equation*}
+    = \frac{-R_p + j \cdot \omega \cdot C_p \cdot R_p^2}{-1 - \omega^2 \cdot C_p^2 \cdot R_p^2} = \frac{R_p - j \cdot \omega \cdot C_p \cdot R_p^2}{\omega^2 \cdot C_p^2 \cdot R_p^2 + 1}
+\end{equation*}
 
 %------------------------------------------------------------
 
 \subsection*{7)}
 Ve smyslu zadání úlohy č. C-7 uvažujte sériové zapojení odporu $R_s$ a kondenzátoru s ideálním dielektrikem $C_s$. K soustavě obou prvků nechť je přiloženo napětí $U$. Nakreslete fázorový diagram napětí a proudů soustavy, určete ztrátový činitel, celkovou impedanci a celkové ztráty energie v soustavě.
 
+% Původní příklad v ručně psané podobě
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.85\textwidth]{images/diel7.jpg}
+%\end{figure*}
+
+Sériové náhradní schéma:
 \begin{figure*}[h]
     \centering
-    \includegraphics*[width=0.85\textwidth]{images/diel7.jpg}
+    \includegraphics[width=.7\textwidth]{images/ul7_sch.jpg}
 \end{figure*}
+
+\begin{equation*}
+    \tan \delta = \frac{U_R}{U_C} = \frac{\cancel{I} \cdot R_s}{\cancel{I} \cdot X_C} = \frac{R_s}{\frac{1}{\omega \cdot C_s}} = R_s \cdot \omega \cdot C_s 
+\end{equation*}
+
+\begin{equation*}
+    Z_s = R_s - j \cdot \frac{1}{\omega \cdot C_s}
+\end{equation*}
+
+\begin{equation*}
+    P_z = U_R \cdot I_R = (R_s \cdot I_R) \cdot I_R = R_s \cdot I_R^2 = R_s \cdot \frac{U^2}{\left| \widehat{Z} \right|^2} = R_s \cdot \frac{U^2}{\left( \sqrt{R_s^2 + \left( - \frac{1}{\omega \cdot C_s} \right)^2} \right)^2} = 
+\end{equation*}
+
+\begin{equation*}
+    = R_s \cdot \frac{U^2}{R_s^2 + \frac{1}{\omega^2 \cdot C_s^2}} = R_s \cdot \frac{U^2}{\frac{\omega^2 \cdot R_s^2 \cdot C_s^2 + 1}{\omega^2 \cdot C_s^2}} = \frac{U^2 \cdot \omega^2 \cdot R_s \cdot C_s^2}{\omega^2 \cdot R_s^2 \cdot C_s^2 + 1}
+\end{equation*}
 
 \newpage
 
@@ -211,10 +518,24 @@ Ve smyslu zadání úlohy č. C-7 uvažujte sériové zapojení odporu $R_s$ a k
 \subsection*{8)}
 Určete ztrátový činitel vzduchu za normálních fyzikálních podmínek a při kmitočtu \SI{50}{\hertz}, má-li rozhodující vliv na velikost ztrát elektrická vodivost vzduchu. Relativní permitivita vzduchu je za normálních fyzikálních podmínek rovna \SI{1,000584}{}, rezistivita je za stejných podmínek \SI{e16}{\ohm\meter}.
 
-\begin{figure*}[h]
-    \centering
-    \includegraphics*[width=\textwidth]{images/diel8.jpg}
-\end{figure*}
+% Původní příklad v ručně psané podobě
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=\textwidth]{images/diel8.jpg}
+%\end{figure*}
+
+$f = 50 \; \si{\hertz}$ \\
+$\varepsilon_r = 1,000584$\\
+$\rho = 10^{16} \; \si{\ohm\meter}$ (rezistivita vzduchu)\\
+\noindent\rule{8cm}{0.4pt}
+
+\begin{equation*}
+    \tan \delta = \frac{1}{\omega \cdot R_p \cdot C_p} = \frac{1}{2 \cdot \pi \cdot f \cdot \rho \cdot \cancel{\frac{l}{S}} \cdot \varepsilon_0 \cdot \varepsilon_r \cdot \cancel{\frac{S}{l}}} = \frac{1}{2 \cdot \pi \cdot f \cdot \rho \cdot \varepsilon_0 \cdot \varepsilon_r} = 
+\end{equation*}
+
+\begin{equation*}
+    = \frac{1}{2 \cdot \pi \cdot 50 \cdot 10^{16} \cdot 8,854 \cdot 10^{-12} \cdot 1,000584} = 3,59 \cdot 10^{-8} \; [-]
+\end{equation*}
 
 \newpage
 
