@@ -79,10 +79,51 @@ Platné při teplotě $T=\SI{300}{\kelvin}$
 \subsection*{1)}
 Elektronová polarizovatelnost $\alpha_e$ atomu argonu je \SI{1,43e-40}{\farad\meter\squared}. Určete relativní permitivitu argonu při normálních fyzikálních podmínkách.
 
-\begin{figure*}[h]
-    \centering
-    \includegraphics*[width=0.80\textwidth]{images/diel1.jpg}
-\end{figure*}
+% Původní příklad v ručně psané podobě
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.80\textwidth]{images/diel1.jpg}
+%\end{figure*}
+
+$\upalpha_E = 1,43 \cdot 10^{-40} \; \si{\farad\meter\squared}$\\
+$\upvarepsilon_V = ?$ \\
+\noindent\rule{8cm}{0.4pt}
+
+Claussius - Mossotiho rovnice (C-M):
+
+\begin{equation*}
+    \frac{\varepsilon_r - 1}{\varepsilon_r + 2} = \frac{n \cdot \alpha}{3 \cdot \varepsilon_0} \\
+\end{equation*}
+
+Argon = inertní plyn $\Rightarrow  \varepsilon_r \approx 1$
+
+\begin{equation*}
+    \frac{\varepsilon_r - 1}{1 + 2} = \frac{n \cdot \alpha}{3 \cdot \varepsilon_0}
+\end{equation*}
+
+\begin{equation*}
+    \frac{\varepsilon_r - 1}{\cancel{3}} = \frac{n \cdot \alpha}{\cancel{3} \cdot \varepsilon_0}
+\end{equation*}
+
+\begin{equation*}
+    \varepsilon_r= \frac{n \cdot \alpha}{\varepsilon_0} + 1
+\end{equation*}
+
+n = n\textsubscript{L} = Loshnidtovo číslo = počet atomů v 1 \si{\cubic\meter} \textbf{plynu} (pro pevné látky jde o hodnotu o 2 až 3 řády větší)
+
+\begin{equation*}
+    \varepsilon_r = \frac{n_L \cdot \alpha}{\varepsilon_0} + 1 = \frac{2,688 \cdot 10^{25} \cdot 1,43 \cdot 10^{-40}}{8,854 \cdot 10^{-12}} + 1 = 1,000434 \; [-]
+\end{equation*}
+
+\noindent\rule{8cm}{0.4pt}
+
+Vysvětlivky:
+
+\begin{tabular}{rcl}
+    $\upalpha$ & = & polarizovatelnost \\
+    $\upvarepsilon_0$ & = & permitivita vakua (konstanta) \\
+    n & = & počet atomů v 1 \si{\cubic\meter} látky
+\end{tabular}
 
 \newpage
 
