@@ -504,7 +504,7 @@ Sériové náhradní schéma:
 \end{equation*}
 
 \begin{equation*}
-    R_s \cdot \frac{U^2}{R_s^2 + \frac{1}{\omega^2 \cdot C_s^2}} = R_s \cdot \frac{U^2}{\frac{\omega^2 \cdot R_s^2 \cdot C_s^2 + 1}{\omega^2 \cdot C_s^2}} = \frac{U^2 \cdot \omega^2 \cdot R_s \cdot C_s^2}{\omega^2 \cdot \underbrace{R_s^2}_{\tan \delta^2} \cdot C_s^2 + 1}
+    = R_s \cdot \frac{U^2}{R_s^2 + \frac{1}{\omega^2 \cdot C_s^2}} = R_s \cdot \frac{U^2}{\frac{\omega^2 \cdot R_s^2 \cdot C_s^2 + 1}{\omega^2 \cdot C_s^2}} = \frac{U^2 \cdot \omega^2 \cdot R_s \cdot C_s^2}{\omega^2 \cdot \underbrace{R_s^2}_{\tan \delta^2} \cdot C_s^2 + 1}
 \end{equation*}
 
 \newpage
@@ -514,10 +514,24 @@ Sériové náhradní schéma:
 \subsection*{8)}
 Určete ztrátový činitel vzduchu za normálních fyzikálních podmínek a při kmitočtu \SI{50}{\hertz}, má-li rozhodující vliv na velikost ztrát elektrická vodivost vzduchu. Relativní permitivita vzduchu je za normálních fyzikálních podmínek rovna \SI{1,000584}{}, rezistivita je za stejných podmínek \SI{e16}{\ohm\meter}.
 
-\begin{figure*}[h]
-    \centering
-    \includegraphics*[width=\textwidth]{images/diel8.jpg}
-\end{figure*}
+% Původní příklad v ručně psané podobě
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=\textwidth]{images/diel8.jpg}
+%\end{figure*}
+
+$f = 50 \; \si{\hertz}$ \\
+$\varepsilon_r = 1,000584$\\
+$\rho = 10^{16} \; \si{\ohm\meter}$ (rezistivita vzduchu)\\
+\noindent\rule{8cm}{0.4pt}
+
+\begin{equation*}
+    \tan \delta = \frac{1}{\omega \cdot R_p \cdot C_p} = \frac{1}{2 \cdot \pi \cdot f \cdot \rho \cancel{\frac{l}{s}} \cdot \varepsilon_0 \cdot \varepsilon_r \cdot \cancel{\frac{s}{l}}} = \frac{1}{2 \cdot \pi \cdot f \cdot \rho \cdot \varepsilon_0 \cdot \varepsilon_r} = 
+\end{equation*}
+
+\begin{equation*}
+    = \frac{1}{2 \cdot \pi \cdot 50 \cdot 10^{16} \cdot 8,854 \cdot 10^{-12} \cdot 1,000584} = 3,59 \cdot 10^{-8} \; [-]
+\end{equation*}
 
 \newpage
 
