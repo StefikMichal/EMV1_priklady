@@ -431,19 +431,48 @@ S rostoucí teplotou se tedy snižuje viskozita a zároveň klesá rezistivita.
 V obvodu střídavého elektrického proudu je zapojen kondenzátor, jehož dielektrikum vykazuje ztráty. Chování tohoto kondenzátoru lze za předpokladu, že pochody v dielektriku jsou lineární vyšetřit sledováním ekvivalentního dvouprvkového náhradního zapojení kondenzátoru s ideálním, bezztrátovým dielektrikem a odporu představujícího ztráty. Uvažujte, že kondenzátor s ideálním dielektrikem o kapacitě $C_p$ a odpor $R_p$ jsou v náhradním zapojení spojeny paralelně a že je na uvedenou soustavu připojeno napětí $U$. \\
 Nakreslete pro tento případ fázorový diagram napětí a proudů soustavy a určete ztrátový činitel, celkovou impedanci a celkové ztráty energie v soustavě.
 
+% Původní příklad v ručně psané podobě
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.95\textwidth]{images/diel6.jpg}
+%\end{figure*}
+%
+%\newpage
+%
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=\textwidth]{images/diel6_1.jpg}
+%\end{figure*}
+
+Paralelní náhradní zapojení:
 \begin{figure*}[h]
     \centering
-    \includegraphics*[width=0.95\textwidth]{images/diel6.jpg}
+    \includegraphics[width=.7\textwidth]{images/ul6_sch.jpg}
 \end{figure*}
 
-\newpage
+Kondenzátor (C) - nejprve proud, potom napětí\\
+tan (tg) - protilehlá ku přilehlé\\
+X\textsubscript{C} - kapacitní reaktance\\
+Z\textsubscript{C} - komplexní impedance
 
-\begin{figure*}[h]
-    \centering
-    \includegraphics*[width=\textwidth]{images/diel6_1.jpg}
-\end{figure*}
+\begin{equation*}
+    \tan \delta = \frac{I_R}{I_C} = \frac{\frac{\cancel{U}}{R_p}}{\frac{\cancel{U}}{\omega \cdot C_p}} = \frac{\frac{1}{\omega \cdot C_p}}{\frac{R_p}{1}} = \underbrace{\frac{1}{R_P \cdot \omega \cdot C_p}}_{\frac{X_C}{R_p}} \Rightarrow R_p = \frac{1}{\tan \delta \cdot \omega \cdot C_p}
+\end{equation*}
 
-\newpage
+\begin{equation*}
+    P_z = U \cdot I_R = U \cdot \frac{U}{R_p} = \frac{U^2}{\underbrace{R_p}_{\frac{1}{\tan \delta \cdot \omega \cdot C_p}}} = U^2 \cdot \tan \delta \cdot \omega \cdot C_p
+\end{equation*}
+
+\begin{equation*}
+    Z_C = \frac{1}{j \cdot \omega \cdot C_p} \cdot \frac{j}{j} = - \frac{j}{\omega \cdot C_p}
+\end{equation*}
+
+\begin{equation*}
+    Z_p = \frac{Z_C \cdot R_p}{Z_C + R_p} = \frac{- \frac{j \cdot R_p}{\omega \cdot C_p}}{\ \frac{j}{\omega \cdot C_p} + R_p} = \frac{\frac{-j \cdot R_p}{\cancel{\omega \cdot C_p}}}{\frac{-j + \omega \cdot C_p \cdot R_p}{\cancel{\omega \cdot C_p}}} = \frac{j \cdot R_p}{j - \omega \cdot C_p \cdot R_p} \cdot \underbrace{\frac{j + \omega \cdot C_p \cdot R_p}{j + \omega \cdot C_p \cdot R_p}}_{\textrm{Cmpx sdružené číslo}} =
+\end{equation*}
+\begin{equation*}
+    = \frac{-R_p + j \cdot \omega \cdot C_p \cdot R_p^2}{-1 - \omega^2 \cdot C_p^2 \cdot R_p^2} = \frac{R_p - j \cdot \omega \cdot C_p \cdot R_p^2}{\omega^2 \cdot C_p^2 \cdot R_p^2 + 1}
+\end{equation*}
 
 %------------------------------------------------------------
 
