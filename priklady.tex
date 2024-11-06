@@ -162,9 +162,9 @@ Pokud $x\rightarrow 0$:
 Na základě toho:
 
 \begin{equation*}
-    1 + \frac{k \cdot \ln \varepsilon_{rs}}{1} = V_1 \cdot \left( 1 + \frac{k \cdot \ln \epsilon_{r1}}{1} \right) + V_2 \cdot \left( 1 + \frac{k \cdot \ln \varepsilon_{r2}}{1} \right)
+    1 + \frac{k \cdot \ln \varepsilon_{rs}}{1} = V_1 \cdot \left( 1 + \frac{k \cdot \ln \varepsilon_{r1}}{1} \right) + V_2 \cdot \left( 1 + \frac{k \cdot \ln \varepsilon_{r2}}{1} \right)
 \end{equation*}
-
+ 
 V\textsubscript{1} a V\textsubscript{2} jsou objemové podíly, dohromady tedy dají 1
 
 \begin{equation*}
@@ -236,7 +236,7 @@ Sériově zapojené kondenzátory (k = -1):
 \begin{align*}
     \varepsilon_{rs}^{-1} &= V_1 \cdot \varepsilon_{r1}^{-1} + V_2 \cdot \varepsilon_{r2}^{-1} \\
     \frac{1}{\varepsilon_{rs}} &= V_1 \cdot \frac{1}{\varepsilon_{r1}} + V_2 \cdot \frac{1}{\varepsilon_{r2}} \\
-    \frac{1}{\varepsilon_{rs}} &= \frac{3}{5} \cdot \frac{1}{\varepsilon_{r1}} + \frac{2}{5} \cdot \frac{1}{1} \\
+    \frac{1}{\varepsilon_{rs}} &= \frac{3}{5} \cdot \frac{1}{2,3} + \frac{2}{5} \cdot \frac{1}{1} \\
     \frac{1}{\varepsilon_{rs}} &= 0,661 \\
     \varepsilon_{rs} &= \frac{1}{\varepsilon_{rs}} \\
     \varepsilon_{rs} &= 1,513 \; [-]
@@ -292,8 +292,8 @@ v němž $A [\SI{}{\ohm\meter}]$ a $B [\SI{}{\kelvin}]$ jsou materiálové konst
 %\end{figure*}
 
 $\rho = A \cdot e^\frac{B}{T}$\\
-A [\si{\ohm\meter}], B [\si{\tesla}] = materiálové konstanty (neměnné s teplotou)\\
-T = \SI{7e3}{\kelvin}\\
+A [\si{\ohm\meter}], B [\si{\kelvin}] = materiálové konstanty (neměnné s teplotou)\\
+B = \SI{7e3}{\kelvin}\\
 \noindent\rule{8cm}{0.4pt}
 
 20 \si{\celsius} = 293,15 \si{\kelvin}:
@@ -389,7 +389,7 @@ Neznáme A, B, můžeme vytvořit soustavu se 2 teplotami z tabulky.
 
 \begin{align*}
     \ln \left( \frac{\frac{\eta_1}{\cancel{k}}}{\frac{\eta_2}{\cancel{k}}} \right) &= \frac{B}{T_1} - \frac{B}{T_2} \\
-    \ln \left( \frac{eta_1}{\eta_2} \right) &= B \cdot \left( \frac{1}{T_1} - \frac{1}{T_2} \right) \\
+    \ln \left( \frac{\eta_1}{\eta_2} \right) &= B \cdot \left( \frac{1}{T_1} - \frac{1}{T_2} \right) \\
     B &= \frac{\ln \left( \frac{\eta_1}{\eta_2} \right)}{\left( \frac{1}{T_1} - \frac{1}{T_2} \right)}
 \end{align*}
 
@@ -456,7 +456,11 @@ X\textsubscript{C} - kapacitní reaktance\\
 Z\textsubscript{C} - komplexní impedance
 
 \begin{equation*}
-    \tan \delta = \frac{I_R}{I_C} = \frac{\frac{\cancel{U}}{R_p}}{\frac{\cancel{U}}{\omega \cdot C_p}} = \frac{\frac{1}{\omega \cdot C_p}}{\frac{R_p}{1}} = \underbrace{\frac{1}{R_P \cdot \omega \cdot C_p}}_{\frac{X_C}{R_p}} \Rightarrow R_p = \frac{1}{\tan \delta \cdot \omega \cdot C_p}
+    \tan \delta = \frac{I_R}{I_C} = \frac{\frac{\cancel{U}}{R_p}}{\frac{\cancel{U}}{\omega \cdot C_p}} = \frac{\frac{1}{\omega \cdot C_p}}{\frac{R_p}{1}} = \frac{1}{R_P \cdot \omega \cdot C_p} = \frac{X_c}{R_p} = \frac{1}{\omega \cdot R_p \cdot C_p} 
+\end{equation*}
+
+\begin{equation*}
+    \Rightarrow R_p = \frac{1}{\tan \delta \cdot \omega \cdot C_p}
 \end{equation*}
 
 \begin{equation*}
@@ -468,7 +472,7 @@ Z\textsubscript{C} - komplexní impedance
 \end{equation*}
 
 \begin{equation*}
-    Z_p = \frac{Z_C \cdot R_p}{Z_C + R_p} = \frac{- \frac{j \cdot R_p}{\omega \cdot C_p}}{\ \frac{j}{\omega \cdot C_p} + R_p} = \frac{\frac{-j \cdot R_p}{\cancel{\omega \cdot C_p}}}{\frac{-j + \omega \cdot C_p \cdot R_p}{\cancel{\omega \cdot C_p}}} = \frac{j \cdot R_p}{j - \omega \cdot C_p \cdot R_p} \cdot \underbrace{\frac{j + \omega \cdot C_p \cdot R_p}{j + \omega \cdot C_p \cdot R_p}}_{\textrm{Cmpx sdružené číslo}} =
+    Z_p = \frac{Z_C \cdot R_p}{Z_C + R_p} = \frac{- \frac{j \cdot R_p}{\omega \cdot C_p}}{- \frac{j}{\omega \cdot C_p} + R_p} = \frac{\frac{-j \cdot R_p}{\cancel{\omega \cdot C_p}}}{\frac{-j + \omega \cdot C_p \cdot R_p}{\cancel{\omega \cdot C_p}}} = \frac{j \cdot R_p}{j - \omega \cdot C_p \cdot R_p} \cdot \underbrace{\frac{j + \omega \cdot C_p \cdot R_p}{j + \omega \cdot C_p \cdot R_p}}_{\textrm{Cmpx sdružené číslo}} =
 \end{equation*}
 \begin{equation*}
     = \frac{-R_p + j \cdot \omega \cdot C_p \cdot R_p^2}{-1 - \omega^2 \cdot C_p^2 \cdot R_p^2} = \frac{R_p - j \cdot \omega \cdot C_p \cdot R_p^2}{\omega^2 \cdot C_p^2 \cdot R_p^2 + 1}
@@ -500,11 +504,11 @@ Sériové náhradní schéma:
 \end{equation*}
 
 \begin{equation*}
-    P_z = U_R \cdot I_R = (R_s \cdot I_R) \cdot I_R = R_s \cdot I_R^2 = R_s \cdot \frac{U^2}{\left| \overline{Z} \right|^2} = R_s \cdot \frac{U^2}{\sqrt{R_s^2 + \left( - \frac{1}{\omega \cdot C_s} \right)^2}^2} = 
+    P_z = U_R \cdot I_R = (R_s \cdot I_R) \cdot I_R = R_s \cdot I_R^2 = R_s \cdot \frac{U^2}{\left| \widehat{Z} \right|^2} = R_s \cdot \frac{U^2}{\left( \sqrt{R_s^2 + \left( - \frac{1}{\omega \cdot C_s} \right)^2} \right)^2} = 
 \end{equation*}
 
 \begin{equation*}
-    = R_s \cdot \frac{U^2}{R_s^2 + \frac{1}{\omega^2 \cdot C_s^2}} = R_s \cdot \frac{U^2}{\frac{\omega^2 \cdot R_s^2 \cdot C_s^2 + 1}{\omega^2 \cdot C_s^2}} = \frac{U^2 \cdot \omega^2 \cdot R_s \cdot C_s^2}{\omega^2 \cdot \underbrace{R_s^2}_{\tan \delta^2} \cdot C_s^2 + 1}
+    = R_s \cdot \frac{U^2}{R_s^2 + \frac{1}{\omega^2 \cdot C_s^2}} = R_s \cdot \frac{U^2}{\frac{\omega^2 \cdot R_s^2 \cdot C_s^2 + 1}{\omega^2 \cdot C_s^2}} = \frac{U^2 \cdot \omega^2 \cdot R_s \cdot C_s^2}{\omega^2 \cdot R_s^2 \cdot C_s^2 + 1}
 \end{equation*}
 
 \newpage
@@ -526,7 +530,7 @@ $\rho = 10^{16} \; \si{\ohm\meter}$ (rezistivita vzduchu)\\
 \noindent\rule{8cm}{0.4pt}
 
 \begin{equation*}
-    \tan \delta = \frac{1}{\omega \cdot R_p \cdot C_p} = \frac{1}{2 \cdot \pi \cdot f \cdot \rho \cancel{\frac{l}{s}} \cdot \varepsilon_0 \cdot \varepsilon_r \cdot \cancel{\frac{s}{l}}} = \frac{1}{2 \cdot \pi \cdot f \cdot \rho \cdot \varepsilon_0 \cdot \varepsilon_r} = 
+    \tan \delta = \frac{1}{\omega \cdot R_p \cdot C_p} = \frac{1}{2 \cdot \pi \cdot f \cdot \rho \cdot \cancel{\frac{l}{S}} \cdot \varepsilon_0 \cdot \varepsilon_r \cdot \cancel{\frac{S}{l}}} = \frac{1}{2 \cdot \pi \cdot f \cdot \rho \cdot \varepsilon_0 \cdot \varepsilon_r} = 
 \end{equation*}
 
 \begin{equation*}
