@@ -342,17 +342,86 @@ Měřením dynamické viskozity transformátorového oleje BTS2 na Höpplerově 
     \end{tblr}
 \end{table}
 
-\begin{figure*}[h]
-    \centering
-    \includegraphics*[width=0.75\textwidth]{images/diel5.jpg}
-\end{figure*}
+% Původní příklad v ručně psané podobě
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.75\textwidth]{images/diel5.jpg}
+%\end{figure*}
+%
+%\newpage
+%
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.85\textwidth]{images/diel5_1.jpg}
+%\end{figure*}
+
+$\rho_{20} = 3 \cdot 10^{11} \; \si{\ohm\meter}$\\
+$\rho_{50,85} = ?$\\
+$\rho = A \cdot e^\frac{B}{T}$\\
+$\eta \cdot \gamma = k$\\
+\noindent\rule{8cm}{0.4pt}
+
+Neznáme A, B, můžeme vytvořit soustavu se 2 teplotami z tabulky.
+
+\begin{equation*}
+    \frac{\eta}{\rho} = k \Rightarrow \rho = \frac{\eta}{k}
+\end{equation*}
+
+\begin{align*}
+    \frac{\eta_1}{k} &= A \cdot e^\frac{B}{T_1}\\
+    \frac{\eta_2}{k} &= A \cdot e^\frac{B}{T_2}
+\end{align*}
+
+\begin{center}
+    \noindent\rule{5cm}{0.4pt}
+\end{center}
+
+\begin{align*}
+    \ln \left( \frac{\eta_1}{k} \right) & = \ln A + \frac{B}{T_1}\\
+    \ln \left( \frac{\eta_2}{k} \right) & = - \ln A - \frac{B}{T_2}
+\end{align*}
+
+\begin{center}
+    \noindent\rule{5cm}{0.4pt}
+\end{center}
 
 \newpage
 
-\begin{figure*}[h]
-    \centering
-    \includegraphics*[width=0.85\textwidth]{images/diel5_1.jpg}
-\end{figure*}
+\begin{align*}
+    \ln \left( \frac{\frac{\eta_1}{\cancel{k}}}{\frac{\eta_2}{\cancel{k}}} \right) &= \frac{B}{T_1} - \frac{B}{T_2} \\
+    \ln \left( \frac{eta_1}{\eta_2} \right) &= B \cdot \left( \frac{1}{T_1} - \frac{1}{T_2} \right) \\
+    B &= \frac{\ln \left( \frac{\eta_1}{\eta_2} \right)}{\left( \frac{1}{T_1} - \frac{1}{T_2} \right)}
+\end{align*}
+
+Dosadíme z tabulky pro 20 \si{\celsius} a 40 \si{\celsius}:
+
+\begin{equation*}
+    B = \frac{\ln \left( \frac{4,35 \cdot 10^{-2}}{1,21 \cdot 10^{-2}} \right)}{\left( \frac{1}{293,15} - \frac{1}{313,15} \right)} = 5873,15 \; \si{\kelvin}
+\end{equation*}
+
+Nalezení A:
+
+\begin{align*}
+    \rho_{20} &= A \cdot e^{\frac{B}{T_{20}}} \\
+    3 \cdot 10^{11} &= A \cdot e^\frac{5873,15}{293,15} \\
+    A &= \frac{3 \cdot 10^{11}}{e^\frac{5873,15}{293,15}} = 597,3 \; \si{\ohm\meter}
+\end{align*}
+
+Nyní můžeme spočítat rezistivity stejným způsobem jako v příkladu 4.
+
+50 \si{\celsius} = 323,15 \si{\kelvin}:
+
+\begin{equation*}
+    \rho_{50} = A \cdot e^\frac{B}{323,15} = 597,3 \cdot e^\frac{5873,15}{323,15} = 46,704\cdot 10^9 \; \si{\ohm\meter}
+\end{equation*}
+
+85 \si{\celsius} = 358,15 \si{\kelvin}:
+
+\begin{equation*}
+    \rho_{85} = A \cdot e^\frac{B}{358,15} =  597,3 \cdot e^\frac{5873,15}{358,15} = 7,907 \cdot 10^9 \; \si{\ohm\meter}
+\end{equation*}
+
+S rostoucí teplotou se tedy snižuje viskozita a zároveň klesá rezistivita.
 
 \newpage
 
