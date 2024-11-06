@@ -479,10 +479,33 @@ Z\textsubscript{C} - komplexní impedance
 \subsection*{7)}
 Ve smyslu zadání úlohy č. C-7 uvažujte sériové zapojení odporu $R_s$ a kondenzátoru s ideálním dielektrikem $C_s$. K soustavě obou prvků nechť je přiloženo napětí $U$. Nakreslete fázorový diagram napětí a proudů soustavy, určete ztrátový činitel, celkovou impedanci a celkové ztráty energie v soustavě.
 
+% Původní příklad v ručně psané podobě
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.85\textwidth]{images/diel7.jpg}
+%\end{figure*}
+
+Sériové náhradní schéma:
 \begin{figure*}[h]
     \centering
-    \includegraphics*[width=0.85\textwidth]{images/diel7.jpg}
+    \includegraphics[width=.7\textwidth]{images/ul7_sch.jpg}
 \end{figure*}
+
+\begin{equation*}
+    \tan \delta = \frac{U_R}{U_C} = \frac{\cancel{I} \cdot R_s}{\cancel{I} \cdot X_C} = \frac{R_s}{\frac{1}{\omega \cdot C_s}} = R_s \cdot \omega \cdot C_s 
+\end{equation*}
+
+\begin{equation*}
+    Z_s = R_s - j \cdot \frac{1}{\omega \cdot C_s}
+\end{equation*}
+
+\begin{equation*}
+    P_z = U_R \cdot I_R = (R_s \cdot I_R) \cdot I_R = R_s \cdot I_R^2 = R_s \cdot \frac{U^2}{\left| \overline{Z} \right|^2} = R_s \cdot \frac{U^2}{\sqrt{R_s^2 + \left( - \frac{1}{\omega \cdot C_s} \right)^2}^2} = 
+\end{equation*}
+
+\begin{equation*}
+    R_s \cdot \frac{U^2}{R_s^2 + \frac{1}{\omega^2 \cdot C_s^2}} = R_s \cdot \frac{U^2}{\frac{\omega^2 \cdot R_s^2 \cdot C_s^2 + 1}{\omega^2 \cdot C_s^2}} = \frac{U^2 \cdot \omega^2 \cdot R_s \cdot C_s^2}{\omega^2 \cdot \underbrace{R_s^2}_{\tan \delta^2} \cdot C_s^2 + 1}
+\end{equation*}
 
 \newpage
 
