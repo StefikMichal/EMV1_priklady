@@ -285,12 +285,40 @@ Rezistivitu elektroizolačních kapalin $\rho_v$ lze v závislosti na teplotě v
 \end{equation}
 v němž $A [\SI{}{\ohm\meter}]$ a $B [\SI{}{\kelvin}]$ jsou materiálové konstanty; teplota T je udána v \SI{}{\kelvin}. Kabelový impregnant složený z minerálního oleje s přídavkem \SI{25}{\percent} (hmotnostních) rafinované kalafuny má při teplotě \SI{20}{\degreeCelsius} rezistivitu \SI{2e10}{\ohm\meter}. Stanovte rezistivitu tohoto impregnantu při teplotách \SI{50}{\degreeCelsius} a \SI{80}{\degreeCelsius}, je li součinitel $B$ roven \SI{7e3}{\kelvin}.
 
-\begin{figure*}[h]
-    \centering
-    \includegraphics*[width=0.75\textwidth]{images/diel4.jpg}
-\end{figure*}
+% Původní příklad v ručně psané podobě
+%\begin{figure*}[h]
+%    \centering
+%    \includegraphics*[width=0.75\textwidth]{images/diel4.jpg}
+%\end{figure*}
 
+$\rho = A \cdot e^\frac{B}{T}$\\
+A [\si{\ohm\meter}], B [\si{\tesla}] = materiálové konstanty (neměnné s teplotou)\\
+T = \SI{7e3}{\kelvin}\\
+\noindent\rule{8cm}{0.4pt}
 
+20 \si{\celsius} = 293,15 \si{\kelvin}:
+
+\begin{equation*}
+    \rho_{20} = 2 \cdot 10^{10} \; \si{\ohm\meter}
+\end{equation*}
+
+\begin{equation*}
+    A = \frac{\rho_{20}}{e^\frac{B}{T}} = \frac{2 \cdot 10^{10}}{e^\frac{7 \cdot 10^3}{293,15}} = 0,8525 \; \si{\ohm\meter}
+\end{equation*}
+
+50 \si{\celsius} = 323,15 \si{\kelvin}:
+
+\begin{equation*}
+    \rho_{50} = A \cdot e^\frac{B}{T} = 0,8525 \cdot e^\frac{7 \cdot 10^3}{323,15} = 2,179 \cdot 10^9 \; \si{\ohm\meter}
+\end{equation*}
+
+80 \si{\celsius} = 353,15 \si{\kelvin}:
+
+\begin{equation*}
+    \rho_{80} = A \cdot e^\frac{B}{T} = 0,8525 \cdot e^\frac{7 \cdot 10^3}{353,15} = 0,346 \cdot 10^9 \; \si{\ohm\meter}
+\end{equation*}
+
+Z výpočtu vyplývá, že s rostoucí teplotou klesá rezistivita elektroizolačních materiálů.
 
 \newpage
 
